@@ -1,17 +1,20 @@
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import "./App.css";
+import { ControlPanel } from "./components/control-panel/controlpanel";
+import { InputContainer } from "./components/input/inputcontainer";
+import { OutputContainer } from "./components/output/output";
 
 function App() {
   return (
     <Grid container>
-      <Grid sx={{ background: "pink" }} item xs={12} md={12}>
-        1
+      <Grid item xs={12} md={12}>
+        <ControlPanel />
       </Grid>
       <Grid item xs={12} md={6}>
-        2
+        <InputContainer />
       </Grid>
       <Grid item xs={12} md={6}>
-        3
+        <OutputContainer />
       </Grid>
     </Grid>
   );
