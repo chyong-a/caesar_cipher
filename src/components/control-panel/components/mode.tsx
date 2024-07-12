@@ -5,10 +5,15 @@ import {
   Radio,
   RadioGroup,
 } from "@mui/material";
-import { useState } from "react";
+// import { useState } from "react";
 
-export const Mode = () => {
-  const [mode, setMode] = useState("encode");
+interface ModeProps {
+  mode: string;
+  setMode: (mode: string) => void;
+}
+
+export const Mode = ({ mode, setMode }: ModeProps) => {
+  // const [mode, setMode] = useState("encode");
   return (
     <FormControl>
       <FormLabel>Mode</FormLabel>

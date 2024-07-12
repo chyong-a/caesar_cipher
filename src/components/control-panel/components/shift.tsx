@@ -1,12 +1,18 @@
 import { Box, TextField, Typography } from "@mui/material";
-import { useState } from "react";
+// import { useState } from "react";
 
 interface ShiftProps {
   characters: string;
+  shiftNumber: number;
+  setShiftNumber: (shiftNumber: number) => void;
 }
 
-export const Shift = ({ characters }: ShiftProps) => {
-  const [shiftNumber, setShiftNumber] = useState(3);
+export const Shift = ({
+  characters,
+  shiftNumber,
+  setShiftNumber,
+}: ShiftProps) => {
+  // const [shiftNumber, setShiftNumber] = useState(3);
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Typography>Shift</Typography>
