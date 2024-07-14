@@ -5,7 +5,6 @@ import {
   Radio,
   RadioGroup,
 } from "@mui/material";
-// import { useState } from "react";
 
 interface ModeProps {
   mode: string;
@@ -13,16 +12,48 @@ interface ModeProps {
 }
 
 export const Mode = ({ mode, setMode }: ModeProps) => {
-  // const [mode, setMode] = useState("encode");
   return (
     <FormControl>
-      <FormLabel>Mode</FormLabel>
+      <FormLabel
+        sx={{
+          color: "#86C232",
+        }}
+      >
+        Mode
+      </FormLabel>
       <RadioGroup
         defaultValue={mode}
         onChange={(e) => setMode(e.currentTarget.value)}
+        sx={{
+          color: "#474B4F",
+        }}
       >
-        <FormControlLabel value="encode" control={<Radio />} label="Encode" />
-        <FormControlLabel value="decode" control={<Radio />} label="Decode" />
+        <FormControlLabel
+          value="encode"
+          control={
+            <Radio
+              sx={{
+                "&, &.Mui-checked": {
+                  color: "#474B4F",
+                },
+              }}
+            />
+          }
+          label="Encode"
+        />
+        <FormControlLabel
+          value="decode"
+          control={
+            <Radio
+              sx={{
+                "&, &.Mui-checked": {
+                  color: "#474B4F",
+                },
+              }}
+            />
+          }
+          label="Decode"
+        />
       </RadioGroup>
     </FormControl>
   );

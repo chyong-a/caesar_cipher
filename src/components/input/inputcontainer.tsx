@@ -11,9 +11,13 @@ export const InputContainer = ({ text, setText }: InputContainerProps) => {
       fullWidth
       multiline
       rows={12}
-      // style={{ margin: "16px" }}
       value={text}
       onChange={(e) => setText(e.currentTarget.value)}
+      inputProps={{
+        style: {
+          color: "#474B4F",
+        },
+      }}
     />
   );
 };

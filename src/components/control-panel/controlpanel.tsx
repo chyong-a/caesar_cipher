@@ -3,6 +3,7 @@ import logo from "../../assets/logo.png";
 import { Mode } from "./components/mode";
 import { Shift } from "./components/shift";
 import { Alphabet } from "./components/alphabet";
+import { Typography } from "@mui/material";
 
 interface ControlPanelProps {
   characters: string;

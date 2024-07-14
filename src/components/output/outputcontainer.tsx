@@ -22,6 +22,11 @@ export const OutputContainer = ({ text }: OutputContainerProps) => {
       onClick={(e) => {
         handleClick(e);
       }}
+      inputProps={{
+        style: {
+          color: "#474B4F",
+        },
+      }}
     />
   );
 };

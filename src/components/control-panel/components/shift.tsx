@@ -1,5 +1,4 @@
 import { Box, TextField, Typography } from "@mui/material";
-// import { useState } from "react";
 
 interface ShiftProps {
   characters: string;
@@ -12,21 +11,28 @@ export const Shift = ({
   shiftNumber,
   setShiftNumber,
 }: ShiftProps) => {
-  // const [shiftNumber, setShiftNumber] = useState(3);
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <Typography>Shift</Typography>
+      <Typography sx={{ color: "#86C232", marginBottom: "20px" }}>
+        Shift
+      </Typography>
       <TextField
         label="Shift number"
         type="number"
         InputLabelProps={{
           shrink: true,
+          style: { color: "#474B4F" },
+        }}
+        inputProps={{
+          style: {
+            color: "#474B4F",
+          },
         }}
         value={shiftNumber}
         onChange={(e) => setShiftNumber(Number(e.currentTarget.value))}
       />
-      <Typography>
-        {characters[0] + " -> " + characters[shiftNumber]}
+      <Typography sx={{ color: "#474B4F" }}>
+        {characters[0] + " -> " + characters[shiftNumber % characters.length]}
       </Typography>
     </Box>
   );
