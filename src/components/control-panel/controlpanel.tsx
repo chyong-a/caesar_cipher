@@ -1,5 +1,4 @@
 import { ControlPanelBoxStyled } from "./styles/controlpanel.styles";
-import logo from "../../assets/logo.png";
 import { Mode } from "./components/mode";
 import { Shift } from "./components/shift";
 import { Alphabet } from "./components/alphabet";
@@ -24,7 +23,18 @@ export const ControlPanel = ({
 }: ControlPanelProps) => {
   return (
     <ControlPanelBoxStyled sx={{ flexDirection: { xs: "column", md: "row" } }}>
-      <img src={logo} style={{ width: "100px", objectFit: "contain" }} />
+      <Typography
+        style={{
+          background:
+            "-webkit-linear-gradient(45deg, #86C232 30%, #474B4F 90%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          fontSize: "60px",
+        }}
+        variant="h1"
+      >
+        Caesar Cipher
+      </Typography>
       <Mode mode={mode} setMode={setMode} />
       <Shift
         characters={characters}

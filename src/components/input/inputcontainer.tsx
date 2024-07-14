@@ -8,7 +8,7 @@ interface InputContainerProps {
 export const InputContainer = ({ text, setText }: InputContainerProps) => {
   return (
     <TextField
-      fullWidth
+      sx={{ width: { md: "100%", xs: "90%" } }}
       multiline
       rows={12}
       value={text}

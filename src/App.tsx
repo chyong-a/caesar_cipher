@@ -44,10 +44,10 @@ function App() {
           setShiftNumber={setShiftNumber}
         />
       </Grid>
-      <Grid item xs={12} md={5} sx={{ margin: "16px auto" }}>
+      <Grid item xs={12} md={4} sx={{ margin: "16px auto" }}>
         <InputContainer text={text} setText={setText} />
       </Grid>
-      <Grid item xs={12} md={5} sx={{ margin: "16px auto" }}>
+      <Grid item xs={12} md={4} sx={{ margin: "16px auto" }}>
         <OutputContainer text={processText(text)} />
       </Grid>
     </Grid>
