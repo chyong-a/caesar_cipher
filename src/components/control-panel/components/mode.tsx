@@ -17,6 +17,7 @@ export const Mode = ({ mode, setMode }: ModeProps) => {
       <FormLabel
         sx={{
           color: "#86C232",
+          fontWeight: "bold",
         }}
       >
         Mode

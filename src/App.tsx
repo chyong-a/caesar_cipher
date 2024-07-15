@@ -4,33 +4,15 @@ import { ControlPanel } from "./components/control-panel/controlpanel";
 import { InputContainer } from "./components/input/inputcontainer";
 import { OutputContainer } from "./components/output/outputcontainer";
 import { useState } from "react";
+import { processText } from "./utils/functions";
 
 function App() {
-  const [text, setText] = useState("Hello World");
+  const [text, setText] = useState(
+    "In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code, or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet."
+  );
   const [characters, setCharacters] = useState("abcdefghijklmnopqrstuvwxyz");
   const [mode, setMode] = useState("encode");
-  const [shiftNumber, setShiftNumber] = useState(3);
-
-  const processText = (text: string) => {
-    let result = text.split("");
-    for (var i = 0; i < text.length; i++) {
-      const lowerCaseChar = text[i].toLowerCase();
-      if (characters.includes(lowerCaseChar)) {
-        const isInLowerCase = lowerCaseChar == text[i];
-        const currentIndex = characters.indexOf(lowerCaseChar);
-        let newIndex = currentIndex + shiftNumber;
-        if (newIndex > characters.length - 1) {
-          newIndex = newIndex % characters.length;
-        }
-        if (isInLowerCase) {
-          result[i] = characters[newIndex].toLowerCase();
-        } else {
-          result[i] = characters[newIndex].toUpperCase();
-        }
-      }
-    }
-    return result.join("");
-  };
+  const [shiftNumber, setShiftNumber] = useState(7);
 
   return (
     <Grid container>
@@ -48,7 +30,9 @@ function App() {
         <InputContainer text={text} setText={setText} />
       </Grid>
       <Grid item xs={12} md={4} sx={{ margin: "16px auto" }}>
-        <OutputContainer text={processText(text)} />
+        <OutputContainer
+          text={processText(mode, characters, shiftNumber, text)}
+        />
       </Grid>
     </Grid>
   );

@@ -29,7 +29,10 @@ export const OutputContainer = ({ text }: OutputContainerProps) => {
           },
         }}
       />
-      <Typography variant="body1" style={{ color: "#86C232" }}>
+      <Typography
+        variant="body1"
+        style={{ color: "#86C232", marginTop: "4px" }}
+      >
         Click on the field to copy the text.
       </Typography>
     </>

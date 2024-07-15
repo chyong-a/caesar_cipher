@@ -13,7 +13,9 @@ export const Shift = ({
 }: ShiftProps) => {
   return (
     <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <Typography sx={{ color: "#86C232", marginBottom: "20px" }}>
+      <Typography
+        sx={{ color: "#86C232", marginBottom: "20px", fontWeight: "bold" }}
+      >
         Shift
       </Typography>
       <TextField
