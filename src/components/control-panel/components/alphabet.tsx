@@ -1,9 +1,5 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
-
-interface AlphabetProps {
-  characters: string;
-  setCharacters: (newValue: string) => void;
-}
+import { AlphabetProps } from "../../../utils/interfaces";
 
 export const Alphabet = ({ characters, setCharacters }: AlphabetProps) => {
   return (

@@ -1,9 +1,5 @@
 import { TextField } from "@mui/material";
-
-interface InputContainerProps {
-  text: string;
-  setText: (newText: string) => void;
-}
+import { InputContainerProps } from "../../utils/interfaces";
 
 export const InputContainer = ({ text, setText }: InputContainerProps) => {
   return (

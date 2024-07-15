@@ -1,8 +1,5 @@
 import { TextField, Typography } from "@mui/material";
-
-interface OutputContainerProps {
-  text: string;
-}
+import { OutputContainerProps } from "../../utils/interfaces";
 
 export const OutputContainer = ({ text }: OutputContainerProps) => {
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {

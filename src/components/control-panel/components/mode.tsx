@@ -5,11 +5,7 @@ import {
   Radio,
   RadioGroup,
 } from "@mui/material";
-
-interface ModeProps {
-  mode: string;
-  setMode: (mode: string) => void;
-}
+import { ModeProps } from "../../../utils/interfaces";
 
 export const Mode = ({ mode, setMode }: ModeProps) => {
   return (

@@ -1,17 +1,9 @@
 import { ControlPanelBoxStyled } from "./styles/controlpanel.styles";
 import { Mode } from "./components/mode";
 import { Shift } from "./components/shift";
-import { Alphabet } from "./components/alphabet";
 import { Typography } from "@mui/material";
-
-interface ControlPanelProps {
-  characters: string;
-  setCharacters: (characters: string) => void;
-  mode: string;
-  setMode: (mode: string) => void;
-  shiftNumber: number;
-  setShiftNumber: (shiftNumber: number) => void;
-}
+import { ControlPanelProps } from "../../utils/interfaces";
+import { Alphabet } from "./components/alphabet";
 
 export const ControlPanel = ({
   characters,

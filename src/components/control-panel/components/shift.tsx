@@ -1,10 +1,5 @@
 import { Box, TextField, Typography } from "@mui/material";
-
-interface ShiftProps {
-  characters: string;
-  shiftNumber: number;
-  setShiftNumber: (shiftNumber: number) => void;
-}
+import { ShiftProps } from "../../../utils/interfaces";
 
 export const Shift = ({
   characters,
