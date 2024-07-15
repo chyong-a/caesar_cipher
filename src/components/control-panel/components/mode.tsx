@@ -23,7 +23,7 @@ export const Mode = ({ mode, setMode }: ModeProps) => {
         Mode
       </FormLabel>
       <RadioGroup
-        defaultValue={mode}
+        value={mode}
         onChange={(e) => setMode(e.currentTarget.value)}
         sx={{
           color: "#474B4F",
