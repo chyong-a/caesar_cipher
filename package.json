@@ -1,7 +1,7 @@
 {
   "homepage": "https://chyong-a.github.io/caesar_cipher/",
   "name": "caesar",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
