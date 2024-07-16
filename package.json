@@ -1,9 +1,9 @@
 {
+  "homepage": "https://chyong-a.github.io/caesar_cipher/",
   "name": "caesar",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://chyong-a.github.io/caesar_cipher/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -31,5 +31,10 @@
     "gh-pages": "^6.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
